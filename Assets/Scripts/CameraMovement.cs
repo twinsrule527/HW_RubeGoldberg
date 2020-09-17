@@ -33,18 +33,18 @@ public class CameraMovement : MonoBehaviour
             FollowPosition = Global.CameraFollow.transform.position;
             Movement = FollowPosition - Position;
         }
-        if(Movement.magnitude < 1) {
+        if(Movement.magnitude < 0.5) {
             //if the camera is close enough to the object, it just moves in
             Movement_Normal = Movement;
             
         }
-        else if(Movement.magnitude < 2) {
+        else if(Movement.magnitude < 1) {
             //Otherwise it might normalize the vector
-            Movement_Normal = Vector3.Normalize(Movement);
+            Movement_Normal = Vector3.Normalize(Movement) / 2;
         }
         else {
             //Or, if the object is far enough away, it will bring itself halfway there
-            Movement_Normal = Movement / 2;
+            Movement_Normal = Movement / 4;
 
         }
         //Then, finally, the camera moves
