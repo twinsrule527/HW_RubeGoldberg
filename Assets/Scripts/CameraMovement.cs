@@ -4,6 +4,8 @@ using UnityEngine;
 
 public static class Global {
     public static GameObject CameraFollow;
+
+    public static bool EndGame = false;
 }
 public class CameraMovement : MonoBehaviour
 {
