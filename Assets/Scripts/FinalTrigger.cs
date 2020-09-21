@@ -7,6 +7,7 @@ public class FinalTrigger : MonoBehaviour
     //This trigger will turn on a boolean which ends the run with a finale
     void OnTriggerEnter2D(Collider2D activator) {
         Global.EndGame = true;
+        //Global.CameraFollow = null;
         Destroy(this);
     }    
     

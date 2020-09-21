@@ -51,11 +51,15 @@ public class CameraMovement : MonoBehaviour
                 }
             }
             else if(Global.CameraFollow.name == "TossBlock (PseudoBall)") {
-                Debug.Log("H");
                 if(camera.orthographicSize < 30f ) {
                     camera.orthographicSize = camera.orthographicSize + 0.03f;
                 }
             }
+        }
+        else {
+            
+            Movement = new Vector3(0f, 0f, 0f);
+
         }
         //if(Movement.magnitude < 0.5) {
             //if the camera is close enough to the object, it just moves in
