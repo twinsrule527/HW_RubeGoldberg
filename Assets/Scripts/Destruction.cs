@@ -9,7 +9,6 @@ public class Destruction : MonoBehaviour
     void Update()
     {
         if(Global.EndGame == true ) {
-            Debug.Log("H");
             Destroy(GetComponent<PolygonCollider2D>());
 
         }

@@ -10,7 +10,7 @@ public class RopeScript : MonoBehaviour
     Vector2 end2 = new Vector2(1f,10f);
     DistanceJoint2D dj2D;
 
-    Color black = new Color(0f, 0f, 0f, 1f);
+    Color white = new Color(1f, 1f, 1f, 1f);
      // Start is called before the first frame update
 
     void Start()
@@ -22,9 +22,9 @@ public class RopeScript : MonoBehaviour
 
         line.startWidth = 0.05f;
 
-        line.startColor = black;
+        line.startColor = white;
 
-        line.endColor = black;
+        line.endColor = white;
 
         dj2D = GetComponent<DistanceJoint2D>();
     }
