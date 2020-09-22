@@ -22,7 +22,7 @@ public class Scr_PlayMusic : MonoBehaviour
         if(Input.GetKey(KeyCode.Space)&& !started) {
             started = true;
 
-            audioData.Play(10);
+            audioData.PlayDelayed(1);
         }
     }
 }
