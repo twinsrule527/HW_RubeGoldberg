@@ -1,9 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class StartTheMachine : MonoBehaviour
 {   
+    //This script has attached audio sources
+    AudioSource audioData;
+
     //This is the power of the starting force used to propel the first ball
     private Vector2 starting_force = new Vector2(0.0f, 3000.0f);
     bool started = false;
@@ -13,6 +15,9 @@ public class StartTheMachine : MonoBehaviour
     void Start() {
         //Setting up the Rigidbody
         rb2d = GetComponent<Rigidbody2D> ();
+        //Sets up the AudioSource
+        audioData = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -23,6 +28,7 @@ public class StartTheMachine : MonoBehaviour
             //The machine is started
             started = true;
             
+            audioData.Play(0);
             //And the starting force is applied
             rb2d.AddForce(starting_force);
         }
